@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -38,4 +38,29 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+/* Adicional */
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'sans-serif';
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)), url('https://wallpaperaccess.com/full/20993.jpg');
+  background-size: 100%;
+  background-position: center;
+  /* Evita que se repita la imagen */
+  background-attachment: fixed;
+  padding: 10px 8%;
+}
+
+.color{
+  color: white;
+  font-weight: bold;
 }

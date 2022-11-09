@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
 import theme from "./theme";
+// import { Header } from "./components/Header"
 import { CardPokemons, DropDown } from "./components";
 import { ThemeProvider } from "@mui/material/styles";
 import { Container } from "@mui/material";
 import { get } from "./services";
+
+
+import Header from './components/Header';
+
+import './App.css';
 
 function App() {
   const [type, setType] = useState("");
@@ -34,12 +40,15 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container>
-        <DropDown type={type} handleChange={handleChange} types={types} />
-        <CardPokemons pokemons={pokemons} />
-      </Container>
-    </ThemeProvider>
+    <div className="container">
+      <ThemeProvider theme={theme}>
+        <Container>
+          <Header/>
+          <DropDown type={type} handleChange={handleChange} types={types} />
+          <CardPokemons pokemons={pokemons} />
+        </Container>
+      </ThemeProvider>
+    </div>
   );
 }
 

@@ -1,3 +1,4 @@
+import { ClassNames } from "@emotion/react";
 import {
   Box,
   InputLabel,
@@ -10,8 +11,8 @@ import {
 const DropDown = ({ type, handleChange, types }) => {
   return (
     <Box mt={5}>
-      <Typography variant="h4" mb={3}>
-        Tipo de pokemones
+      <Typography className="color" variant="h4" mb={3}>
+        Tipo de Pokemones
       </Typography>
       <FormControl fullWidth>
         <InputLabel>Tipos</InputLabel>

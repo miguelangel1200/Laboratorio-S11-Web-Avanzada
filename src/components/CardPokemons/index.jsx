@@ -6,6 +6,7 @@ import {
   Typography,
   Grid,
 } from "@mui/material";
+import './cardpokemons.css'
 
 const CardPokemons = ({ pokemons }) => {
   return (
@@ -16,6 +17,7 @@ const CardPokemons = ({ pokemons }) => {
             <Grid item xs={12} sm={4}>
               <Card>
                 <CardMedia
+                  className="cardmedia"
                   component="img"
                   width={200}
                   height={300}
@@ -24,7 +26,7 @@ const CardPokemons = ({ pokemons }) => {
                   }.svg`}
                 />
                 <CardContent>
-                  <Typography variant="body1">{pokemon.name}</Typography>
+                  <Typography variant="h5">{pokemon.name}</Typography>
                 </CardContent>
               </Card>
             </Grid>
