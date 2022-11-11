@@ -1,9 +1,11 @@
-const baseURL = "https://pokeapi.co/api/v2";
+const baseURL = "https://static.rviewer.io/challenges/datasets/dreadful-cherry-tomatoes/data.json";
 
 export const get = async (url) => {
   try {
-    const response = await fetch(`${baseURL}/${url}`);
-    return await response.json();
+    const response = await fetch(`${baseURL}`);
+    const data = await response.json()
+    // console.log(data.entries)
+    return data.entries
   } catch (error) {
     console.log("error", error);
   }

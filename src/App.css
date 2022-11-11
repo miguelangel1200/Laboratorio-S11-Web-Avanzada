@@ -52,7 +52,8 @@
 .container{
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)), url('https://wallpaperaccess.com/full/20993.jpg');
+  background-color: #303434;
+  /* background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)), url('https://wallpaperaccess.com/full/20993.jpg'); */
   background-size: 100%;
   background-position: center;
   /* Evita que se repita la imagen */

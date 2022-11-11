@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import theme from "./theme";
 // import { Header } from "./components/Header"
-import { CardPokemons, DropDown } from "./components";
+import { CardMovie, DropDown } from "./components";
 import { ThemeProvider } from "@mui/material/styles";
-import { Container } from "@mui/material";
+import { Container ,Typography} from "@mui/material";
 import { get } from "./services";
 
 
@@ -16,18 +16,15 @@ function App() {
 
   const [types, setTypes] = useState([]);
 
-  const [pokemons, setPokemons] = useState([]);
+  const [entries, setEntries] = useState([]);
+
 
   async function getTypes() {
-    const types = await get("type");
-    setTypes(types.results);
+    const entries = await get("title");
+    setEntries(entries);
+    console.log("entries",entries)
   }
 
-  async function getPokemons(url) {
-    const id = url.split("/");
-    const pokemons = await get(`type/${id[id.length - 2]}`);
-    setPokemons(pokemons.pokemon);
-  }
 
   const handleChange = (event) => {
     setType(event.target.value);
@@ -42,10 +39,11 @@ function App() {
   return (
     <div className="container">
       <ThemeProvider theme={theme}>
+        <Header/>
         <Container>
-          <Header/>
           <DropDown type={type} handleChange={handleChange} types={types} />
-          <CardPokemons pokemons={pokemons} />
+          <Typography color={"white"} variant="h4">Popular Movie</Typography>
+          <CardMovie entries={entries} />
         </Container>
       </ThemeProvider>
     </div>
